@@ -9,6 +9,8 @@ describe('Testando múltiplas páginas', () => {
     cy.getByData('app-home').find('a').eq(1).click()
     cy.getByData('titulo-cartoes').should('exist').and('have.text', 'Meus cartões')
     cy.location('pathname').should('eq','/home/cartoes')
+    cy.getByData('app-home').find('a').eq(2).click()
+    cy.location('pathname').should('eq','/home/servicos')
     })
 })
     
