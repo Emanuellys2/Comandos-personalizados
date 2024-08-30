@@ -13,6 +13,7 @@ describe ('Testando dispositivos móveis', () => {
 
         cy.location('pathname').should('eq','/home')
 
+        // Clica no menu burger para abrir o menu lateral 
         cy.getByData('menu-burguer').click()
         cy.getByData('menu-lateral').find('a').eq(3).click()
 
